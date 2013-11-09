@@ -14,6 +14,7 @@ Details
 * All events are bundled into one API call.
 * All the events have a name and a date.
 * A sample event the server can expect:
+
 ```
   {
     "name" : "The Event Name",
@@ -24,6 +25,7 @@ Details
     }
   }
 ```
+
 * Events can optionally include a payload with an arbitrary dictionary of key/value pairs.
 * The state of the events are: "Waiting" if they are waiting to be uploaded, "Sending" if they are sending", "Sent" if they are sent successfully and "Error" if they were not uploaded. (It is possible to have some events in the table with a "Sending" or "Error" status while others are "Waiting".
 * Even if the server is slow and could take several seconds to return a success/failure response, new events can be recorded and are accounted for. 
